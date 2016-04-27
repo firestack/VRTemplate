@@ -37,7 +37,7 @@ APawn* AVRTemplateGameMode::SpawnDefaultPawnFor_Implementation(AController* NewP
 
 bool AVRTemplateGameMode::ShouldUseVR_Implementation()
 {
-	return UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled() && UseVR;
+	return (UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled() && UseVR) || ForceVR;
 }
 
 UClass * AVRTemplateGameMode::GetDefaultPawnClassForController_Implementation(AController * InController)

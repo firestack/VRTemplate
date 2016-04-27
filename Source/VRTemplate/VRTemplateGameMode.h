@@ -39,6 +39,9 @@ public:
 	UPROPERTY(EditAnywhere, noclear, BlueprintReadOnly, Category = Classes)
 		TSubclassOf<class APawn> DefaultVRPawnClass;
 
-	UPROPERTY(EditAnywhere, noclear, BlueprintReadOnly, Category = Classes)
-		bool UseVR;
+	UPROPERTY(EditAnywhere, noclear, BlueprintReadOnly, AdvancedDisplay, Category = Classes)
+		bool UseVR = true;
+
+	UPROPERTY(EditAnywhere, noclear, BlueprintReadOnly, AdvancedDisplay, Category = Classes)
+		bool ForceVR = false;
 };
